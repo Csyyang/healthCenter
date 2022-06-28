@@ -3,20 +3,26 @@
     <VNav />
 
     <div class="annular">
-      <Vbar id="bar1" key="bar1"/>
-      <Vbar id="bar2" key="bar2" color="#FFAA01" :text="['热量','千卡']" grey="#F2EDE3"/>
+      <VBar id="bar1" key="bar1" />
+      <VBar id="bar2" key="bar2" color="#FFAA01" :text="['热量','千卡']" grey="#F2EDE3" />
     </div>
+
+    <VCardBox>
+      23322
+    </VCardBox>
+
   </div>
 </template>
 
 <script>
 import { VNav } from "@/components/index";
-import Vbar from "./components/bar.vue";
+import { VBar, VCardBox } from "./components/index";
 
 export default {
   components: {
     VNav,
-    Vbar,
+    VBar,
+    VCardBox,
   },
   mounted() {},
   methods: {},
