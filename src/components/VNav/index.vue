@@ -38,10 +38,13 @@ export default {
       this.$store.commit("navBar/changeSelected", val);
 
       if (val === "1") {
-        this.$router.push("/healthCenter/test");
+        this.$router.push("/healthCenter/health");
       }
       if (val === "0") {
         this.$router.push("/healthCenter/index");
+      }
+      if (val === "2") {
+        this.$router.push("/healthCenter/test");
       }
     },
   },
