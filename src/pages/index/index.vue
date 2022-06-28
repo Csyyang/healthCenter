@@ -1,7 +1,6 @@
 <template>
   <div id="index">
     <VNav />
-    <div class="health-msg"></div>
   </div>
 </template>
 
