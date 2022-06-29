@@ -1,7 +1,7 @@
 <template>
   <div class="circle-box">
     <span class="circle" :style="`background:${color}`"></span>
-    {{ text }}
+    <slot>{{ text }}</slot>
   </div>
 </template>
 
@@ -23,11 +23,11 @@ export default {
 <style lang="less" scoped>
 .circle-box {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   .circle {
     display: inline-block;
-    height: 15px;
-    width: 15px;
+    height: 16px;
+    width: 16px;
     margin-right: 12px;
     border-radius: 50%;
   }

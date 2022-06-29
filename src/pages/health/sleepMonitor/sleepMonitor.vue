@@ -1,6 +1,8 @@
 <template>
   <div class="sleep-monitor">
-    <van-nav-bar title="睡眠" left-arrow @click-left="onClickLeft" />
+    <div style="height: .88rem">
+      <van-nav-bar class="nav" title="睡眠" left-arrow @click-left="onClickLeft" />
+    </div>
 
     <div class="tab-box">
       <van-tabs v-model="active">
@@ -38,17 +40,48 @@
       <div class="date">
         2022年6月23日 星期四
       </div>
+
+      <div class="week-box">
+        <VWeek text="一" />
+        <VWeek text="二" />
+        <VWeek text="三" />
+        <VWeek text="四" />
+        <VWeek text="今日" :isNow="true" />
+        <VWeek text="六" />
+        <VWeek text="日" />
+      </div>
+
+      <div class="today">
+        <img :src="require('@img/now.png')">
+        <div>
+          <VLegend color="#fdad3e">
+            <div class="today-msg">步行<span class="num">1,557</span>步</div>
+          </VLegend>
+          <VLegend color="#50c3d7">
+            <div class="today-msg">呼吸训练<span class="num">0</span>次</div>
+          </VLegend>
+          <VLegend color="#8d62d7">
+            <div class="today-msg">规律起床<span class="num">07：48</span></div>
+          </VLegend>
+        </div>
+      </div>
+
+      <div class="btn-box">
+        <van-button block>编辑作息管理</van-button>
+      </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import { VBar, VLegend } from "./components/index";
+import { VBar, VLegend, VWeek } from "./components/index";
 
 export default {
   components: {
     VBar,
     VLegend,
+    VWeek,
   },
   data() {
     return {
@@ -121,5 +154,44 @@ export default {
     text-align: center;
     font-size: 28px;
   }
+}
+
+.week-box {
+  display: flex;
+  padding: 0 61px;
+  justify-content: space-between;
+  background: #f3f6f9;
+  margin-bottom: 60px;
+}
+
+.today {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    width: 236px;
+    height: 219px;
+  }
+  .today-msg {
+    color: #999999;
+    font-size: 28px;
+    .num {
+      font-size: 48px;
+      color: #222;
+      margin: 0 8px;
+    }
+  }
+}
+.btn-box {
+  padding: 60px 135px;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.sleep-monitor /deep/ .van-button--default {
+  border: 2px solid #dde4ef;
 }
 </style>
