@@ -7,7 +7,7 @@
       <VBar id="bar2" key="bar2" color="#FFAA01" :text="['热量','千卡']" grey="#F2EDE3" />
     </div>
 
-    <VCardBox key="sleep" class="sleep">
+    <VCardBox key="sleep" class="sleep" @click.native="goSleep">
       <VSleep />
     </VCardBox>
 
@@ -58,7 +58,11 @@ export default {
     VHeight,
   },
   mounted() {},
-  methods: {},
+  methods: {
+    goSleep() {
+      this.$router.push('/healthCenter/sleepMonitor')
+    }
+  },
 };
 </script>
 

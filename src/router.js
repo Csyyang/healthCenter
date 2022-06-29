@@ -3,7 +3,8 @@ import Router from 'vue-router'
 // import store from '../core/store'
 import healthCenterIndex from '@/pages/index/index'
 import healthCenterTest from '@/pages/test/index'
-import healthCenterHealth from '@/pages/health/index'
+import healthCenterHealth from '@/pages/health/index/index'
+import healthCenterSleep from '@/pages/health/sleepMonitor/sleepMonitor'
 // import { mapGetters } from 'vuex';
 
 
@@ -29,6 +30,11 @@ const router = new Router({
       path: '/healthCenter/health',
       name: 'HealthCenterHealth',
       component: healthCenterHealth
+    },
+    {
+      path: '/healthCenter/sleepMonitor',
+      name: 'HealthCenterSleepMonitor',
+      component: healthCenterSleep
     }
   ],
 })

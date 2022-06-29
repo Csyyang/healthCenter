@@ -90,7 +90,12 @@ exports.cssLoaders = function (options) {
         'nav-bar-arrow-size': '48px',
         'nav-bar-icon-color': '@gray-8',
         'nav-bar-text-color': '@gray-8',
-        'picker-background-color': '#F3F6F9'
+        'picker-background-color': '#F3F6F9',
+        'tab-line-height': '88px',
+        'tabs-line-height': '88px',
+        'tabs-bottom-bar-width': '30px',
+        'tabs-bottom-bar-height': '4px',
+        'tabs-bottom-bar-color': '#5679BF'
         // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
         // hack: `true; @import "your-less-file-path.less";`,
       },
