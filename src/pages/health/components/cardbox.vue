@@ -56,7 +56,7 @@ export default {
   }
 
   .msg {
-    margin-top: 24px;
+    margin-top: 20px;
     span {
         font-size: 28px;
     }
